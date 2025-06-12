@@ -1,0 +1,24 @@
+body {
+    background: linear-gradient(90deg, rgb(224, 247, 250), white);
+}
+h1 {
+    font-weight: bold;
+    -webkit-text-stroke: 1px rgb(19, 188, 244);
+    color: white;
+    background: linear-gradient(90deg, rgb(50, 174, 247), white);
+}
+h2 {
+    font-weight: bold;
+    -webkit-text-stroke: 0.8px rgb(158, 223, 253);
+    color: white;
+    background: linear-gradient(90deg, rgb(107, 204, 248), white);
+}
+h3 {
+    font-style: italic;
+    text-decoration: underline;
+}
+div {
+    border: 3px solid rgb(114, 213, 255);
+    background-color: rgb(205, 239, 255);
+
+}

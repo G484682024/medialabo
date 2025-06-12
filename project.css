@@ -1,0 +1,17 @@
+h3 {
+    font-size: 95%;
+}
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+th, td {
+    border: 2px solid black;
+    padding: 10px;
+}
+th {
+    background-color: rgb(144, 251, 251);
+}
+td {
+    background-color: rgb(201, 254, 255);
+}
