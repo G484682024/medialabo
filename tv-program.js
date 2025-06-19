@@ -4,7 +4,7 @@ function print(data) {
   console.log("1件目の検索結果");
   console.log("開始時刻: " + data.list.g1[0].start_time);
   console.log("終了時刻: " + data.list.g1[0].end_time);
-  console.log("チャンネル: " + data.list.g1[0].name);
+  console.log("チャンネル: " + data.list.g1[0].service.name);
   console.log("タイトル: " + data.list.g1[0].title);
   console.log("サブタイトル: " + data.list.g1[0].subtitle);
   console.log("番組説明: " + data.list.g1[0].content);
@@ -13,7 +13,7 @@ function print(data) {
   console.log("2件目の検索結果");
   console.log("開始時刻: " + data.list.g1[1].start_time);
   console.log("終了時刻: " + data.list.g1[1].end_time);
-  console.log("チャンネル: " + data.list.g1[1].name);
+  console.log("チャンネル: " + data.list.g1[1].service.name);
   console.log("タイトル: " + data.list.g1[1].title);
   console.log("サブタイトル: " + data.list.g1[1].subtitle);
   console.log("番組説明: " + data.list.g1[1].content);
