@@ -21,6 +21,29 @@ function print(data) {
 
 }
 
+b = document.querySelector('button');
+b.addEventListener('click' , kensaku);
+
+function kensaku() {
+  service = document.querySelector('select#service');
+  genre = document.querySelector('select#genre');
+
+  sdx = service.selectedIndex;
+  gdx = genre.selectedIndex;
+
+  sos = service.querySelectorAll('option');
+  gog = genre.querySelectorAll('option');
+
+  os = sos.item(sdx);
+  og = gog.item(gdx);
+
+  console.log("チャンネル: " + os.getAttribute('value'));
+  console.log("ジャンル: " + og.getAttribute('value'));
+
+}
+
+
+
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
 
