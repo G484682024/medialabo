@@ -47,6 +47,170 @@ function kensaku() {
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
 
+
+if (document.querySelector('div#result')) {
+  let re = document.querySelector('div#result');
+  re.remove();
+}
+
+  let div = document.createElement('div');
+  div.setAttribute('id', 'result');
+
+  let table = document.createElement('table');
+
+  let h3 = document.createElement('h3');
+  h3.textContent = "NHK の番組表（検索結果は2件）";
+  div.insertAdjacentElement('beforeend', h3);
+
+
+  let h2 = document.createElement('h2');
+  h2.textContent = "1件目の検索結果";
+  div.insertAdjacentElement('beforeend', h2);
+
+
+  let th = document.createElement('th');
+  th.textContent = "開始時刻";
+  let tr = document.createElement('tr');
+  tr.insertAdjacentElement('afterbegin', th);
+  let td = document.createElement('td');
+  td.textContent = data.list.g1[0].end_time;
+  tr.insertAdjacentElement('beforeend', td);
+  table.insertAdjacentElement('beforeend', tr);
+
+  th = document.createElement('th');
+  th.textContent = "終了時刻";
+  tr = document.createElement('tr');
+  tr.insertAdjacentElement('afterbegin', th);
+  td = document.createElement('td');
+  td.textContent = data.list.g1[0].start_time;
+  tr.insertAdjacentElement('beforeend', td);
+  table.insertAdjacentElement('beforeend', tr);
+
+  th = document.createElement('th');
+  th.textContent = "チャンネル";
+  tr = document.createElement('tr');
+  tr.insertAdjacentElement('afterbegin', th);
+  td = document.createElement('td');
+  td.textContent = data.list.g1[0].service.name;
+  tr.insertAdjacentElement('beforeend', td);
+  table.insertAdjacentElement('beforeend', tr);
+
+  th = document.createElement('th');
+  th.textContent = "タイトル";
+  tr = document.createElement('tr');
+  tr.insertAdjacentElement('afterbegin', th);
+  td = document.createElement('td');
+  td.textContent = data.list.g1[0].title;
+  tr.insertAdjacentElement('beforeend', td);
+  table.insertAdjacentElement('beforeend', tr);
+
+  th = document.createElement('th');
+  th.textContent = "サブタイトル";
+  tr = document.createElement('tr');
+  tr.insertAdjacentElement('afterbegin', th);
+  td = document.createElement('td');
+  td.textContent = data.list.g1[0].subtitle;
+  tr.insertAdjacentElement('beforeend', td);
+  table.insertAdjacentElement('beforeend', tr);
+
+  th = document.createElement('th');
+  th.textContent = "番組説明";
+  tr = document.createElement('tr');
+  tr.insertAdjacentElement('afterbegin', th);
+  td = document.createElement('td');
+  td.textContent = data.list.g1[0].content;
+  tr.insertAdjacentElement('beforeend', td);
+  table.insertAdjacentElement('beforeend', tr);
+
+  th = document.createElement('th');
+  th.textContent = "出演者";
+  tr = document.createElement('tr');
+  tr.insertAdjacentElement('afterbegin', th);
+  td = document.createElement('td');
+  td.textContent = data.list.g1[0].act;
+  tr.insertAdjacentElement('beforeend', td);
+  table.insertAdjacentElement('beforeend', tr);
+  
+  div.insertAdjacentElement('beforeend', table);
+
+  h2 = document.createElement('h2');
+  h2.textContent = "2件目の検索結果";
+  div.insertAdjacentElement('beforeend', h2);
+
+  table = document.createElement('table');
+  th = document.createElement('th');
+  th.textContent = "開始時刻";
+  tr = document.createElement('tr');
+  tr.insertAdjacentElement('afterbegin', th);
+  td = document.createElement('td');
+  td.textContent = data.list.g1[1].end_time;
+  tr.insertAdjacentElement('beforeend', td);
+  table.insertAdjacentElement('beforeend', tr);
+
+  th = document.createElement('th');
+  th.textContent = "終了時刻";
+  tr = document.createElement('tr');
+  tr.insertAdjacentElement('afterbegin', th);
+  td = document.createElement('td');
+  td.textContent = data.list.g1[1].start_time;
+  tr.insertAdjacentElement('beforeend', td);
+  table.insertAdjacentElement('beforeend', tr);
+
+  th = document.createElement('th');
+  th.textContent = "チャンネル";
+  tr = document.createElement('tr');
+  tr.insertAdjacentElement('afterbegin', th);
+  td = document.createElement('td');
+  td.textContent = data.list.g1[1].service.name;
+  tr.insertAdjacentElement('beforeend', td);
+  table.insertAdjacentElement('beforeend', tr);
+
+  th = document.createElement('th');
+  th.textContent = "タイトル";
+  tr = document.createElement('tr');
+  tr.insertAdjacentElement('afterbegin', th);
+  td = document.createElement('td');
+  td.textContent = data.list.g1[1].title;
+  tr.insertAdjacentElement('beforeend', td);
+  table.insertAdjacentElement('beforeend', tr);
+
+  th = document.createElement('th');
+  th.textContent = "サブタイトル";
+  tr = document.createElement('tr');
+  tr.insertAdjacentElement('afterbegin', th);
+  td = document.createElement('td');
+  td.textContent = data.list.g1[1].subtitle;
+  tr.insertAdjacentElement('beforeend', td);
+  table.insertAdjacentElement('beforeend', tr);
+
+  th = document.createElement('th');
+  th.textContent = "番組説明";
+  tr = document.createElement('tr');
+  tr.insertAdjacentElement('afterbegin', th);
+  td = document.createElement('td');
+  td.textContent = data.list.g1[1].content;
+  tr.insertAdjacentElement('beforeend', td);
+  table.insertAdjacentElement('beforeend', tr);
+
+  th = document.createElement('th');
+  th.textContent = "出演者";
+  tr = document.createElement('tr');
+  tr.insertAdjacentElement('afterbegin', th);
+  td = document.createElement('td');
+  td.textContent = data.list.g1[1].act;
+  tr.insertAdjacentElement('beforeend', td);
+  table.insertAdjacentElement('beforeend', tr);
+  
+  div.insertAdjacentElement('beforeend', table);
+
+
+
+
+  let bo = document.querySelector('body');
+  bo.insertAdjacentElement('beforeend', div);
+
+
+
 }
 
 // 課題6-1 のイベントハンドラ登録処理は以下に記述
